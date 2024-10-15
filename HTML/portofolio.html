@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Paulien Coeurderoy</title>
+
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+
+  <body>
+    <!-- header design -->
+    <header class="header">
+      <a href="../index.html" class="logo">Portofolio</a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="../index.html">Accueil</a>
+        <a href="about.html">A propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="portofolio.html" class="active">Expériences et Diplômes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- portfolio section design -->
+    <section class="portofolio" id="portofolio">
+      <h2 class="heading">Mes <span>Diplômes</span></h2>
+
+      <div class="portofolio-container">
+        <div class="portofolio-box">
+          <img src="../images/neoma.png" alt="">
+          <div class="portofolio-layer">
+            <h4>Neoma Business School</h4>
+            <p>Depuis septembre 2024 Année préparatoire pour un MSc en Marketing Paris
+              Etudes & décisions marketing</p>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+          <img src="../images/amos.png" alt="">
+          <div class="portofolio-layer">
+            <h4>AMOS Lille</h4>
+            <p>De septembre 2020 à juin 2023 Responsable Marketing et Évènementiel Sport Lille</p>
+            <a href="#" class="btn" onclick="openPdf()">Mon Mémoire</a>
+          </div>
+        </div>
+        
+        <!-- Fenêtre modale stylisée -->
+        <div id="pdfModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closePdf()">&times;</span>
+            <iframe src="../PDF/Mémoire - Coeurderoy Paulien.pdf#toolbar=0" style="width:100%; height:80vh;" frameborder="0"></iframe>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+          <img src="../images/epitech.png" alt="">
+          <div class="portofolio-layer">
+            <h4>Epitech</h4>
+            <p>De septembre 2019 à juin 2020 Informatique Bruxelles
+              Première année en informatique (C, Python)</p>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+            <img src="../images/LFB.png" alt="">
+            <div class="portofolio-layer">
+              <h4>Lycée Français Jean Monnet de Bruxelles</h4>
+              <p>De septembre 2018 à juillet 2019 Baccalauréat S Bruxelles-Capitale</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+
+    <section class="portofolio" id="portofolio">
+      <h2 class="heading">Mes <span>Expériences</span></h2>
+
+      <div class="portofolio-container">
+        <div class="portofolio-box">
+          <img src="../images/digi.png" alt="">
+          <div class="portofolio-layer">
+            <h4>Commercial</h4>
+            <p>Développement de relations clients et atteinte d'objectifs de vente.</p>
+            <a href="digicommerce.html"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+          <img src="../images/losc.svg" alt="">
+          <div class="portofolio-layer">
+            <h4>Stage recrutement au LOSC</h4>
+            <p>Analyse de joueurs, analyse vidéo.</p>
+            <a href="losc.html"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+          <img src="../images/RL.png" alt="">
+          <div class="portofolio-layer">
+            <h4>Professeur de tennis</h4>
+            <p>Encadrement d'élèves et enseignement des techniques de jeu.</p>
+            <a href="RL.html"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+
+        <div class="portofolio-box">
+            <img src="../images/KP.png" alt="">
+            <div class="portofolio-layer">
+              <h4>Kilo Project</h4>
+              <p>Prise en charge des réseaux sociaux, Logistique, Organisation d'activités de team building innovantes.</p>
+              <a href="RL.html"><i class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+
+          <div class="portofolio-box">
+            <img src="../images/belissimo.png" alt="">
+            <div class="portofolio-layer">
+              <h4>Belissimo Sport</h4>
+              <p>Mise en place d'une stratégie de fidélisation des clients,Relation clients.</p>
+              <a href="RL.html"><i class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+
+
+
+    
+
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Paulien Coeurderoy | Les droits sont réservés</p>
+      </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="../script/script.js"></script>
+  </body>
+</html>

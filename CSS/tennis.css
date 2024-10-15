@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .sticky{
+    border-bottom: 1rem solid rgba(0,0,0, .2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+} 
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+span {
+    color: var(--main-color);
+}
+
+/* Styles pour la section des expériences sportives */
+.experiences {
+    padding: 5rem 9%; /* Espacement autour de la section */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+.experiences-container {
+    display: flex; /* Utilise flexbox pour l'alignement */
+    flex-direction: column; /* Colonne pour les expériences */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 3rem; /* Espacement entre les éléments */
+}
+
+.experience-box {
+    display: flex; /* Utilise flexbox pour l'alignement de l'image et du texte */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    justify-content: space-between; /* Espace entre texte et image */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 800px; /* Limite la largeur max pour un meilleur rendu */
+}
+
+.experience-text {
+    flex: 1; /* Prend l'espace disponible pour le texte */
+    padding-right: 2rem; /* Espacement à droite pour séparer le texte de l'image */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+.experience-box img {
+    width: 300px; /* Largeur fixe pour toutes les images */
+    height: 250px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* S'assure que l'image couvre le conteneur sans déformation */
+    border-radius: 1rem; /* Arrondir les coins de l'image */
+}
+
+
+
+.experience-text {
+    flex: 1; /* Prend l'espace disponible pour le texte */
+}
+
+.experience-box h3 {
+    font-size: 2rem; /* Taille de la police pour les sous-titres */
+    margin-bottom: 1rem; /* Espacement en bas du sous-titre */
+}
+
+.experience-box p {
+    font-size: 1.4rem; /* Taille de la police pour les paragraphes */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: var(--text-color); /* Couleur du texte */
+}
+
+.experience-box img {
+    box-shadow: 0 0 15px rgba(0, 239, 255, 0.4); /* Ombre légère */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transition pour l'animation */
+    animation: floatImage 6s ease-in-out infinite; /* Animation plus lente */
+    margin-left: 100px; /* Décale l'image de 100px à droite */
+}
+
+.experience-box img:hover {
+    transform: scale(1.05); /* L'image grossit légèrement au survol */
+    box-shadow: 0 0 25px rgba(0, 239, 255, 0.6); /* Ombre plus intense au survol */
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.5rem); /* Moins de mouvement vertical */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+
+/* BREAKPOINT */
+
+@media (max-width : 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width : 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .portofolio{
+        padding-bottom: 7rem ;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width : 768px){
+     #menu-icon{
+        display: block;
+     }
+
+     .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+     }
+
+     .navbar.active{
+        display: block;
+     }
+
+     .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+     }
+
+     .home{
+        flex-direction: column;
+     }
+     .home-content h3{
+        font-size: 2.6rem;
+     }
+     .home-content h1{
+        font-size: 5rm;
+     }
+     .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+     }
+     .about{
+        flex-direction: column-reverse;
+     }
+     .about img{
+        width: 70vw;
+        margin-top: 4rem;
+     }
+
+     .services h2{
+        margin-bottom: 3rem;
+     }
+     .portofolio h2{
+        margin-bottom: 3rem;
+     }
+     .portofolio-container{
+        grid-template-columns: repeat(2, 1fr);
+     }
+
+}
+
+@media (max-width : 617px){
+    .portofolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width : 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width : 365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}

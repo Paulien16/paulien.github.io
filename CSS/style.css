@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .sticky{
+    border-bottom: 1rem solid rgba(0,0,0, .2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+} 
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 20vw; /* Ajuste la taille */
+    border-radius: 50%; /* Bordure arrondie pour donner un effet plus propre */
+    border: 5px solid var(--main-color); /* Bordure autour de l'image */
+    box-shadow: 0 0 15px rgba(0, 239, 255, 0.4); /* Ombre légère */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Transition pour l'animation */
+    animation: floatImage 6s ease-in-out infinite; /* Animation plus lente */
+    margin-left: 100px; /* Décale l'image de 20px à droite */
+}
+.home-img img:hover {
+    transform: scale(1.05); /* L'image grossit légèrement */
+    box-shadow: 0 0 25px rgba(0, 239, 255, 0.6); /* Ombre plus intense au survol */
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2rem); /* Moins de mouvement vertical */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span {
+    color: var(--main-color);
+}
+
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    gap: 2rem;
+}
+.about-img img{
+    width: 35vw;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: center;
+    line-height: 1.2;
+}
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.services h2{
+    margin-bottom: 5rem;
+    text-align: center; /* Ajout d'un centrage pour le titre */
+    font-size: 5rem; /* Ajustez la taille si nécessaire */
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-top: 20rem;
+}
+
+.services-container .services-box{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+    position: relative; /* Ajout pour gérer le positionnement des éléments enfants */
+    overflow: hidden; /* Assure que les contenus qui débordent ne soient pas visibles */
+}
+
+.services-box {
+    position: relative; /* Nécessaire pour le z-index des éléments enfants */
+    background: #f9f9f9; /* Fond par défaut de la box */
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    height: 300px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+
+  .services-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Fond noir semi-transparent */
+    z-index: 1; /* Positionne en dessous du contenu texte */
+    border-radius: 10px;
+}
+
+.services-box .btn {
+    position: relative; /* Nécessaire pour que le bouton soit au-dessus du fond semi-transparent */
+    z-index: 2; /* Assure que le bouton est au-dessus du fond */
+    background-color: var(--main-color); /* Couleur bleu clair */
+    color: #fff; /* Couleur du texte en blanc */
+    padding: 10px 20px; /* Ajoutez un peu d'espace autour du texte */
+    border: var(--main-color); /* Pas de bordure */
+    border-radius: 10rem; /* Coins arrondis */
+    cursor: pointer; /* Changement de curseur au survol */
+    text-decoration: none; /* Pas de soulignement pour les liens */
+    transition: background-color 0.5s ease; /* Transition pour le changement de couleur */
+}
+
+.services-box .btn:hover {
+    background-color: #87CEEB; /* Couleur bleu plus clair au survol */
+}
+
+
+
+.services-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.services-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3{
+    font-size: 2.6rem; /* Correction de la taille */
+    color: var(--text-color); /* Couleur du texte du titre */
+}
+
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.services-box h3,
+.services-box p {
+    position: relative; /* Pour s'assurer que le texte est au-dessus de l'overlay */
+    z-index: 2; /* S'assure que le texte soit au-dessus du fond */
+}
+
+.services-box.jeux-video {
+    background-image: url('../images/UE.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-box.sport {
+    background-image: url('../images/sport.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-box.musique {
+    background-image: url('../images/fl.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-box.analyse {
+    background-image: url('../images/data.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.portofolio{
+    background: var(--second-bg-color);
+    margin-top: 20px; /* Ajustez cette valeur selon vos besoins */
+    margin-bottom: 20px; /* Ajustez cette valeur selon vos besoins */
+}
+
+.portofolio h2{
+    margin-bottom: 4rem;
+}
+
+.portofolio-container {
+    display: flex; /* Utilise le flexbox pour le conteneur */
+    justify-content: space-between; /* Espace entre les boxes */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    margin: 0 auto;
+    padding: 0;
+}
+
+.portofolio-box {
+    flex: 1 1 calc(25% - 20px); /* Ajuste la largeur des boxes, -20px pour les marges */
+    margin: 10px; /* Ajoute un espacement autour de chaque box */
+    background: var(--second-bg-color); /* Couleur de fond pour les boxes */
+    border-radius: 10px; /* Arrondi des coins */
+    position: relative; /* Nécessaire pour le positionnement */
+    overflow: hidden; /* Cache le débordement */
+    text-align: center; /* Centre le texte à l'intérieur des boxes */
+}
+
+.portofolio-container .portofolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Permet au contenu de s'adapter verticalement */
+    height: 300px; /* Hauteur uniforme pour toutes les boîtes */
+    /* Ajoutez ceci pour centrer le contenu verticalement */
+    align-items: center;
+}
+
+.portofolio-box img {
+    width: 100%; /* Remplit toute la largeur de la box */
+    height: 100%; /* Remplit toute la hauteur de la box */
+    object-fit: contain; /* Couvre toute la box, en préservant les proportions */
+    transition: .2s ease;
+}
+
+.portofolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portofolio-box .portofolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem ;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.portofolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+    z-index: 0; /* Position de l'élément au-dessous du lien */
+}
+
+.portofolio-box:hover .portofolio-layer{
+    transform: translateY(0)
+}
+
+
+.portofolio-layer h4{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.portofolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portofolio-layer a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--main-color); /* Couleur bleu clair */
+    color: var(--text-color);
+    border-radius: 10rem;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Assurez-vous que le lien soit au-dessus de tout */
+}
+
+.portofolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+/* Style pour la fenêtre modale */
+.modal {
+    display: none; /* Cacher par défaut */
+    position: fixed;
+    z-index: 1; /* Placer au-dessus */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contenu de la modale */
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Bouton fermer */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/* BREAKPOINT */
+
+@media (max-width : 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width : 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .portofolio{
+        padding-bottom: 7rem ;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width : 768px){
+     #menu-icon{
+        display: block;
+     }
+
+     .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+     }
+
+     .navbar.active{
+        display: block;
+     }
+
+     .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+     }
+
+     .home{
+        flex-direction: column;
+     }
+     .home-content h3{
+        font-size: 2.6rem;
+     }
+     .home-content h1{
+        font-size: 5rm;
+     }
+     .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+     }
+     .about{
+        flex-direction: column-reverse;
+     }
+     .about img{
+        width: 70vw;
+        margin-top: 4rem;
+     }
+
+     .services h2{
+        margin-bottom: 3rem;
+     }
+     .portofolio h2{
+        margin-bottom: 3rem;
+     }
+     .portofolio-container{
+        grid-template-columns: repeat(2, 1fr);
+     }
+
+}
+
+@media (max-width : 617px){
+    .portofolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width : 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width : 365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
